@@ -15,12 +15,12 @@ Random::Random() {
 }
 
 int Random::next() {
-	int n = rand(); // 0에서 RAND_MAX(32767) 사이의 랜덤한 정수 발생
-	return n;
+	return rand(); // 0에서 RAND_MAX(32767) 사이의 랜덤한 정수 발생
 }
 
 int Random::nextInRange(int x, int y) {
-	int n = (rand() % (y - 1)) + x;
+	int n = (rand() % (y + 1 - x)) + x;  // 0+a ~ (b-1+a+1-a)
+	// rand()%b; 0~(b-1), rand()%b+1; 1~b, rand()%b+a; a~(b-1+a) 
 	return n;
 }
 
