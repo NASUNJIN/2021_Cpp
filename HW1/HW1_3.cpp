@@ -25,6 +25,8 @@ public:
 };
 
 int main() {
+	cout << "20201529 나선진" << endl;
+
 	Integer n(30);
 	cout << n.get() << ' '; // 30 출력
 	n.set(50);
