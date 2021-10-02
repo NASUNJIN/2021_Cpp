@@ -42,7 +42,7 @@ CircleManager::CircleManager(int size) {
 		string name = "";
 		int radius = 0;
 		cin >> name >> radius;
-		(p + i)->setCircle(name, radius);
+		p[i].setCircle(name, radius);
 	}
 }
 
@@ -55,8 +55,8 @@ void CircleManager::searchByName() {
 	string name;
 	cin >> name;
 	for (int i = 0; i < size; i++) {
-		if ((p + i)->getName() == name) {
-			cout << (p + i)->getName() << "의 면적은 " << (p + i)->getArea() << endl;
+		if (p[i].getName() == name) {
+			cout << p[i].getName() << "의 면적은 " << p[i].getArea() << endl;
 		}
 	}
 }
@@ -67,8 +67,8 @@ void CircleManager::searchByArea() {
 	cin >> circleArea;
 	cout << circleArea << "보다 큰 원을 검색합니다." << endl;
 	for (int i = 0; i < size; i++) {
-		if ((p + i)->getArea() > circleArea) {
-			cout << (p + i)->getName() << "의 면적은 " << (p + i)->getArea();
+		if (p[i].getArea() > circleArea) {
+			cout << p[i].getName() << "의 면적은 " << p[i].getArea();
 			if (i < size - 1) 
 				cout << ", ";
 		}
