@@ -5,7 +5,7 @@ using namespace std;
 int main() {
 	cout << "20201529 나선진" << endl << endl;
 	string text;
-	cout << "문자열 입력>>";
+	cout << "문자열 입력>> ";
 	getline(cin, text, '\n');
 	
 	int sum = 0;
