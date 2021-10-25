@@ -25,6 +25,6 @@ int main() {
 		index = text.find('a', index) + 1;
 		count++;
 	}
-	cout << "문자 a는 " << sum << "개 있습니다." << endl;
+	cout << "문자 a는 " << count << "개 있습니다." << endl;
 	
 }
